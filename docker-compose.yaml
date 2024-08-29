@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  nginxui:
+    image: uozi/nginx-ui:latest
+    container_name: nginxui
+    ports:
+      - "${PORT}:9000"
+    environment:
+      - TZ=America/Caracas
+    volumes:
+      - /etc/nginx/:/etc/nginx
+      - /usr/local/etc/nginx-ui/:/etc/nginx-u/
+
+      
